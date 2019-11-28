@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Slim 3</title>
-        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                margin: 50px 0 0 0;
-                padding: 0;
-                width: 100%;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                text-align: center;
-                color: #aaa;
-                font-size: 18px;
-            }
 
-            h1 {
-                color: #719e40;
-                letter-spacing: -3px;
-                font-family: 'Lato', sans-serif;
-                font-size: 100px;
-                font-weight: 200;
-                margin-bottom: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Slim</h1>
-        <div>a microframework for PHP</div>
+<head>
+    <meta charset="utf-8" />
+    <title>Ademir Automóveis</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
-        <?php endif; ?>
-    </body>
+<body>
+    <!--  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 central pt-5">
+                <h1 class="text-center">Ademir Automóveis</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pt-5">
+                <div class=" form  mx-auto">
+                    <h3 class="text-center pt-3">Acesso</h3>
+                    <form action="/login/" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome"  name="nome" placeholder="Nome de usuário">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Senha:</label>
+                            <input type="password" class="form-control" id="senha" required name="senha" placeholder="Senha">
+                        </div>
+                        <button type="submit" class="btn btn-dark ml-1 ">Entrar</button>
+                    </form>
+                    <a href="/cadastro/"><button class="btn btn-dark ml-1 mt-4 ">Cadastrar</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+
 </html>

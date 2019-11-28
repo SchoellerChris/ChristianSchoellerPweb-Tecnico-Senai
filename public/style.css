@@ -1,0 +1,22 @@
+h1 {
+    color: #719e40;
+    letter-spacing: -3px;
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+.container{
+    background-color: #fafafa86;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;  
+    font-size: 4vh;
+}
+.form{
+    width: 40%;
+    height: 50vh;
+    background-color: #fafafa;
+    box-shadow: rgb(4, 151, 4) 0px 2px ;
+}

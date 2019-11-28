@@ -1,0 +1,105 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+      <meta charset="utf-8" />
+      <title>Ademir Automóveis</title>
+      <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="/css/style.css">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+
+      <!--  -->
+      <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="/home/">
+                  <img src="http://icons.iconarchive.com/icons/giannis-zographos/south-american-football-club/256/Palmeiras-icon.png" width="30" height="30" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="/home/">Home <span class="sr-only pt-1">(página atual)</span></a>
+                      </li>
+                      <li class="nav-item active">
+
+                          <a href="/adicionarVeiculo/"><button class="btn btn pt-2">Adicionar veículos</button></a>
+                      </li>
+                      <li class="nav-item active">
+
+                          <a href="/venderVeiculo/"><button class="btn btn pt-2">Vender Veículo</button></a>
+                      </li>
+                      <li class="nav-item active">
+
+                          <a href="/cadastroComprador/"><button class="btn btn pt-2">Cadastrar Comprador</button></a>
+                      </li>
+                      <li class="nav-item active">
+
+                          <a href="/clientes/"><button class="btn btn pt-2">Clientes</button></a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          <div class="row">
+              <div class="col-12 central pt-5">
+                  <h1 class="text-center mr-5">Ademir Automóveis</h1>
+              </div>
+          </div>
+          <div class="row mx-auto">
+              <div class="col-12 pt-5">
+                  <table class="table ">
+                      <thead>
+                          <tr>
+                              <th scope="col">Identificador</th>
+                              <th scope="col">Marca</th>
+                              <th scope="col">Modelo</th>
+                              <th scope="col">Ano</th>
+                              <th scope="col">Status</th>
+
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <?php
+                            foreach ($vendidos as $key => $value) {
+
+                                echo "<tr>";
+                                echo "<th scope='row'>";
+                                echo $value['idcarro'];
+                                echo "</th>";
+                                echo "<td>";
+                                echo $value['marca'];
+                                echo "</td>";
+                                echo "<td >";
+                                echo $value['modelo'];
+                                echo "</td>";
+                                echo "<td >";
+                                echo $value['ano'];
+                                echo "</td>";
+                              
+                           
+                                echo "<td >";
+                                echo 'Vendido';
+                                echo "</td>";
+                                echo "</tr>";
+                            }
+                            ?>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </div>
+
+      </div>
+
+      </div>
+  </body>
+
+  </html>
